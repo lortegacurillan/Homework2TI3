@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "nombre": "Departamento Sol",
+        "direccion": "Calle Luna, 45",
+        "precio": "120000",
+        "capacidad": 4
+    },
+    {
+        "id": 2,
+        "nombre": "Departamento Mar",
+        "direccion": "Avenida Océano, 12",
+        "precio": "150000",
+        "capacidad": 3
+    },
+    {
+        "id": 3,
+        "nombre": "Departamento Tierra",
+        "direccion": "Plaza Tierra, 9",
+        "precio": "90000",
+        "capacidad": 2
+    },
+    {
+        "id": 4,
+        "nombre": "Departamento Viento",
+        "direccion": "Calle Aire, 22",
+        "precio": "110000",
+        "capacidad": 3
+    },
+    {
+        "id": 5,
+        "nombre": "Departamento Fuego",
+        "direccion": "Camino Llama, 34",
+        "precio": "135000",
+        "capacidad": 5
+    },
+    {
+        "id": 6,
+        "nombre": "Departamento Luz",
+        "direccion": "Paseo Luz, 56",
+        "precio": "145000",
+        "capacidad": 4
+    },
+    {
+        "id": 7,
+        "nombre": "Departamento Noche",
+        "direccion": "Avenida Estrella, 78",
+        "precio": "105000",
+        "capacidad": 2
+    },
+    {
+        "id": 8,
+        "nombre": "Departamento Día",
+        "direccion": "Calle Sol, 10",
+        "precio": "115000",
+        "capacidad": 3
+    },
+    {
+        "id": 9,
+        "nombre": "Departamento Crepúsculo",
+        "direccion": "Boulevard Luna, 23",
+        "precio": "95000",
+        "capacidad": 2
+    },
+    {
+        "id": 10,
+        "nombre": "Departamento Aurora",
+        "direccion": "Calle Amanecer, 45",
+        "precio": "125000",
+        "capacidad": 4
+    }
+]
