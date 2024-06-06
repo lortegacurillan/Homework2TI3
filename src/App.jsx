@@ -41,10 +41,13 @@ const DepartmentsPage = () => {
       const start = startDate.getTime();
       const end = endDate.getTime();
       const price = dept.precio;
+      const securityDeposit = dept.precio * 0.1;
       const account = connectedAccount;
       const id = dept.id;
       try {
-          await contract.safeMintApartment(id, start, end, price, {from: account});
+        // console.log(contract.methods);
+          const id = await contract.methods.safeMintApartment(connectedAccount,price,securityDeposit, start, end, {from: account});
+          await contract.methods.rentApartment();
           console.log('Reserva realizada con éxito');
       } catch (error) {
           console.error('Error al realizar la reserva: ', error);

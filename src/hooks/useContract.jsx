@@ -1,15 +1,18 @@
 import ApartmentRental from '../../build/contracts/ApartmentRental.json';
-import contract from '@truffle/contract';
+import Web3 from 'web3';
 
 export const useContract = async () => {
-    const myContract = contract(ApartmentRental);
-    myContract.setProvider(window.ethereum);
+  try {
+    const web3 = new Web3(Web3.givenProvider || 'http://localhost:8545');
+    const networkId = await web3.eth.net.getId();
+    const deployedNetwork = ApartmentRental.networks[networkId];
+    const instance = new web3.eth.Contract(
+      ApartmentRental.abi,
+      deployedNetwork && deployedNetwork.address,
+    );
+    return instance;
+  } catch (error) {
+    console.error('Error loading contract: ', error);
+  }
+}
 
-    try {
-        const contractDeployed = await myContract.deployed();
-        return contractDeployed;
-    } catch (error) {
-        console.error('Failed to connect MetaMask', error);
-        return null;
-    }
-};
