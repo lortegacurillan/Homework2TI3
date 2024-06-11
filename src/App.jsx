@@ -21,6 +21,7 @@ const DepartmentsPage = () => {
           await window.ethereum.request({ method: 'eth_requestAccounts' });
           setWeb3(web3Instance);
 
+<<<<<<< HEAD
           const networkId = await web3Instance.eth.net.getId();
           const deployedNetwork = ApartmentRental.networks[networkId];
           const contractInstance = new web3Instance.eth.Contract(
@@ -33,6 +34,31 @@ const DepartmentsPage = () => {
         }
       } else {
         console.error('Metamask not found');
+=======
+    const handleReserve = async (dept) => {
+      if(!connectedAccount) {
+          console.log('Conéctese con Metamask para realizar la reserva');
+          connectMetamask();
+          return;
+      }
+      if(!contract) {
+          console.log('No se ha podido cargar el contrato');
+          return;
+      }
+      const start = startDate.getTime();
+      const end = endDate.getTime();
+      const price = dept.precio;
+      const securityDeposit = dept.precio * 0.1;
+      const account = connectedAccount;
+      const id = dept.id;
+      try {
+        // console.log(contract.methods);
+          const id = await contract.methods.safeMintApartment(connectedAccount,price,securityDeposit, start, end, {from: account});
+          await contract.methods.rentApartment();
+          console.log('Reserva realizada con éxito');
+      } catch (error) {
+          console.error('Error al realizar la reserva: ', error);
+>>>>>>> 958edbeee32ef46f57074e3d15b1fc6c7c1f450a
       }
     };
 

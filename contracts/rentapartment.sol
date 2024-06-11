@@ -39,29 +39,29 @@ contract ApartmentRental is ERC721 {
         _currentTokenId = 0;
     }
 
-    function safeMintApartment(
-        address to,
-        uint256 rentAmount,
-        uint256 securityDeposit,
-        uint256 leaseStart,
-        uint256 leaseEnd
-    ) public onlyLandlord {
-        require(leaseEnd > leaseStart, "Lease end time must be after lease start time");
+function safeMintApartment(
+    address to,
+    uint256 rentAmount,
+    uint256 securityDeposit,
+    uint256 leaseStart,
+    uint256 leaseEnd
+) public {
+    require(leaseEnd > leaseStart, "Lease end time must be after lease start time");
 
-        uint256 tokenId = _currentTokenId;
-        _currentTokenId++;
+    uint256 tokenId = _currentTokenId++;
+    _apartments[tokenId] = Apartment({
+        rentAmount: rentAmount,
+        securityDeposit: securityDeposit,
+        leaseStart: leaseStart,
+        leaseEnd: leaseEnd,
+        tenant: address(0),
+        exists: true
+    });
 
-        _apartments[tokenId] = Apartment({
-            rentAmount: rentAmount,
-            securityDeposit: securityDeposit,
-            leaseStart: leaseStart,
-            leaseEnd: leaseEnd,
-            tenant: address(0),
-            exists: true
-        });
+    _safeMint(to, tokenId);
+    return tokenId;
+}
 
-        _safeMint(to, tokenId);
-    }
 
     function rentApartment(uint256 tokenId) public payable {
         require(_apartments[tokenId].exists, "Apartment does not exist");
