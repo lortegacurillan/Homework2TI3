@@ -4,69 +4,79 @@
         "nombre": "Departamento Sol",
         "direccion": "Calle Luna, 45",
         "precio": "120000",
-        "capacidad": 4
+        "capacidad": 4,
+        "imagen": "https://www.hogares.cl/wp-content/uploads/2018/06/SLA_3734.jpg"
     },
     {
         "id": 2,
         "nombre": "Departamento Mar",
         "direccion": "Avenida Océano, 12",
         "precio": "150000",
-        "capacidad": 3
+        "capacidad": 3,
+        "imagen": "https://media.admagazine.com/photos/6467b71e70d3fa4f8a2aa26c/16:9/w_1920,c_limit/FedeC-LowRes7463.jpg"
     },
     {
         "id": 3,
         "nombre": "Departamento Tierra",
         "direccion": "Plaza Tierra, 9",
         "precio": "90000",
-        "capacidad": 2
+        "capacidad": 2,
+        "imagen": "https://media.admagazine.com/photos/6317bd95d75f2fd76bd148aa/16:9/w_1920,c_limit/APR%20-%20Nooor%20-%20Appartement%2045m2%20rue%20de%20Grenelle%20-%20cre%CC%81dit%20Nicolas%20MatheusG19_2044.jpg"
     },
     {
         "id": 4,
         "nombre": "Departamento Viento",
         "direccion": "Calle Aire, 22",
         "precio": "110000",
-        "capacidad": 3
+        "capacidad": 3,
+        "imagen": "https://www.iaconcagua.com/Multimedia/posts/departamentos-en-las-condes-edificio-trento.w1600.jpg"
     },
     {
         "id": 5,
         "nombre": "Departamento Fuego",
         "direccion": "Camino Llama, 34",
         "precio": "135000",
-        "capacidad": 5
+        "capacidad": 5,
+        "imagen": "https://i0.wp.com/chocale.cl/wp-content/uploads/2019/03/loft-departamento.jpg?resize=800%2C500&ssl=1"
     },
     {
         "id": 6,
         "nombre": "Departamento Luz",
         "direccion": "Paseo Luz, 56",
         "precio": "145000",
-        "capacidad": 4
+        "capacidad": 4,
+        "imagen": "https://images.unsplash.com/photo-1570129477492-45c003edd2be"
     },
     {
         "id": 7,
         "nombre": "Departamento Noche",
         "direccion": "Avenida Estrella, 78",
         "precio": "105000",
-        "capacidad": 2
+        "capacidad": 2,
+        "imagen": "https://planner5d.com/blog/content/images/size/w2000/2024/05/disenos.departamentos.software.1.jpg"
     },
     {
         "id": 8,
         "nombre": "Departamento Día",
         "direccion": "Calle Sol, 10",
         "precio": "115000",
-        "capacidad": 3
+        "capacidad": 3,
+        "imagen": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
     },
     {
         "id": 9,
         "nombre": "Departamento Crepúsculo",
         "direccion": "Boulevard Luna, 23",
         "precio": "95000",
-        "capacidad": 2
+        "capacidad": 2,
+        "imagen": "https://media.admagazine.com/photos/6317bd95d75f2fd76bd148aa/16:9/w_1920,c_limit/APR%20-%20Nooor%20-%20Appartement%2045m2%20rue%20de%20Grenelle%20-%20cre%CC%81dit%20Nicolas%20MatheusG19_2044.jpg"
     },
     {
         "id": 10,
         "nombre": "Departamento Aurora",
         "direccion": "Calle Amanecer, 45",
         "precio": "125000",
-        "capacidad": 4
+        "capacidad": 4,
+        "imagen": "https://media-front.elmostrador.cl/2020/03/interior-monoambiente-27-metros-1-750x500-1-700x410.jpg"
     }
 ]

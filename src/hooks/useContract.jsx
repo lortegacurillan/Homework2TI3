@@ -1,15 +1,19 @@
 import ApartmentRental from '../../build/contracts/ApartmentRental.json';
-import contract from '@truffle/contract';
+import { useState, useEffect } from 'react';
+import Web3 from 'web3';
 
-export const useContract = async () => {
-    const myContract = contract(ApartmentRental);
-    myContract.setProvider(window.ethereum);
-
-    try {
-        const contractDeployed = await myContract.deployed();
-        return contractDeployed;
-    } catch (error) {
-        console.error('Failed to connect MetaMask', error);
-        return null;
+export function useContract() {
+    const [contract, setContract] = useState(null);
+    
+    useEffect(() => {
+        if (typeof window.ethereum !== 'undefined') {
+        const web3 = new Web3(window.ethereum);
+        const networkId = window.ethereum.networkVersion;
+        const contractAddress = ApartmentRental.networks[networkId].address;
+        const contractInstance = new web3.eth.Contract(ApartmentRental.abi, contractAddress);
+        setContract(contractInstance);
+        }
+    }, []);
+    
+    return [ contract, setContract];
     }
-};
